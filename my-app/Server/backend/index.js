@@ -19,6 +19,6 @@ app.use(express.json());
 app.use('/api', require('./Routes/CreateUser'));
 app.use('/api', require('./Routes/DisplayData'));
 app.use('/api', require('./Routes/OrderData'));
-app.listen(port, function(){
+app.listen(process.env.Port || port, function(){
     console.log(`Example app listening on port ${port}`);
 });
